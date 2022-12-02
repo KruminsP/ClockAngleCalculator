@@ -4,16 +4,9 @@
     {
         public bool IsValid(string minutes)
         {
-            try
-            {
-                int.Parse(minutes);
-            }
-            catch
-            {
-                return false;
-            }
+            var parseResult = int.TryParse(minutes, out var intMinute);
 
-            return int.Parse(minutes) < 60 && int.Parse(minutes) >= 0;
+            return intMinute is < 60 and > 0 && parseResult;
         }
     }
 }

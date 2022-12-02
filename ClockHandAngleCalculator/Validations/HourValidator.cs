@@ -4,16 +4,9 @@
     {
         public bool IsValid(string hours)
         {
-            try
-            {
-                int.Parse(hours);
-            }
-            catch
-            {
-                return false;
-            }
+            int.TryParse(hours,out var intHour);
 
-            return int.Parse(hours) <= 12 && int.Parse(hours) > 0;
+            return intHour is <= 12 and > 0;
         }
     }
 }
