@@ -7,7 +7,6 @@ namespace ClockHandAngleCalculator
         public double Calculation(string hourString, string minuteString)
         {
             var hours = int.Parse(hourString);
-            hours = hours == 12 ? 0 : hours;
             var minutes = int.Parse(minuteString);
             var totalMinutes = hours * 60 + minutes;
 
