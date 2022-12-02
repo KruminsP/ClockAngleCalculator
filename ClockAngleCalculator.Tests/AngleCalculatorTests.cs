@@ -1,6 +1,5 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 
 namespace ClockHandAngleCalculator.Tests
 {
@@ -21,7 +20,7 @@ namespace ClockHandAngleCalculator.Tests
             var hours = "6";
             var minutes = "15";
 
-            var angle= _calculator.Calculation(hours, minutes);
+            var angle = _calculator.Calculation(hours, minutes);
 
             angle.Should().Be(97.5);
         }
